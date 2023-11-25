@@ -1,0 +1,79 @@
+/* Selection Form Styles */
+.selection-form {
+  max-width: 300px;
+  max-height: 700px;
+  align-self: center;
+  /* background-position-y: center; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 0px solid #000000;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+body {
+  background-image: url("./Data-Visualization-thumbnail.jpg");
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+/* Selection Box Styles */
+.selection-box {
+  margin-bottom: 20px;
+}
+
+.selection-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.selection-box select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* Dialogue Box Styles */
+.dialogue-box {
+  margin-bottom: 20px;
+}
+
+.dialogue-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dialogue-box input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* Submit Button Styles */
+.submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0062cc;
+}

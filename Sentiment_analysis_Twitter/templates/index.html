@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Selection Form</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <form class="selection-form" action="/predict" method="post">
+    <div class="selection-box">
+      <label for="selection">
+        <h3><u>Select The Topic Type:</u></h3>
+      </label>
+      <select id="selection" name="selection">
+        <option value="option1">#Hashtag</option>
+        <option value="option2">Reply-to a user</option>
+        <option value="option3">From a user</option>
+        <option value="option4">Mentioned a user</option>
+      </select>
+    </div>
+
+    <div class="dialogue-box">
+      <label for="topic">
+        <h3><u>Enter the topic details:</u></h3>
+      </label>
+      <input type="text" id="topic" name="topic">
+    </div>
+
+    <div class="dialogue-box">
+      <label for="limit">
+        <h3><u>Limit:</u></h3>
+      </label>
+      <input type="number" id="limit" name="limit">
+    </div>
+
+    <div class="dialogue-box">
+      <label for="sDate">
+        <h4><u>Start Date:</u></h4>
+      </label>
+      <!-- <input type="date" id="sDate" name="sDate"> -->
+      <input type="date" id="sDate" name="sDate" pattern="\d{4}-\d{2}-\d{2}" required>
+    </div>
+
+    <div class="dialogue-box">
+      <label for="eDate">
+        <h4><u>End Date:</u></h4>
+      </label>
+      <input type="date" id="eDate" name="eDate" pattern="\d{4}-\d{2}-\d{2}" required>
+      <!-- <input type="date" id="eDate" name="eDate"> -->
+    </div>
+    
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+  <p> 
+    {{predicted_result}}
+  </p>
+</body>
+
+</html>

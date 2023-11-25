@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tweets Analyzer</title>
+    <link rel="stylesheet" href="../static/result.css" />
+</head>
+
+<body>
+    <h1>Tweets Analyzer Report</h1>
+    <br />
+    <div class="container">
+        <div class="info">
+        <p>Number of tweets : {{ count }}</p>
+        <br />
+        <p class="positive">Positive : {{ positive }}</p>
+        <br />
+        <p class="neutral">Neutral : {{ neutral }}</p>
+        <br />
+        <p class="negative">Negative : {{ negative }}</p>
+        </div>
+        <!-- <img src="../static/pie_chart.png" alt="Pie Chart" /> -->
+        <img src="../static/bar_plot.png" alt="Pie Chart" />
+    </div>
+</body>
+
+</html>
