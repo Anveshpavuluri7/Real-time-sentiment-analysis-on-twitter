@@ -157,65 +157,6 @@ def result():
         return render_template('result.html', count=limit, positive=result[2], neutral=result[1], negative=result[0])
 
 
-# query = "(from:elonmusk) until:2023-02-19 since:2020-01-01"
-# limit = 500
-# tweets = []
-# for tweet in sntwitter.TwitterSearchScraper(query).get_items():
-#     # print(vars(tweet))
-#     # break
-#     if(len(tweets) == limit):
-#         break
-#     else:
-#         tweets.append([tweet.date,tweet.user.username,tweet.rawContent])
-# df = pd.DataFrame(tweets,columns=["Date","User","Tweet"])
-# df.to_csv("tweets.csv",encoding="utf-8")
-# # print(df)
-# with open('./static/tweets.csv','r') as csvfile:
-#     reader =  csv.reader(csvfile)
-#     tweet = []
-#     for row in reader:
-#         tweet.append(row[2])
-# # print(tweet)
-
-
-
-# # tweet = "@MehranShakarami today's cold @ home 😒 https://mehranshakarami.com"
-
-# tweet = '😒😒😒' 
-
-# # precprcess tweet
-# tweet_words = []
-
-# for word in tweet.split(' '):
-#     if word.startswith('@') and len(word) > 1:
-#         word = '@user'
-    
-#     elif word.startswith('http'):
-#         word = "http"
-#     tweet_words.append(word)
-
-# tweet_proc = " ".join(tweet_words)
-
-# # load model and tokenizer
-# roberta = "cardiffnlp/twitter-roberta-base-sentiment"
-
-# model = AutoModelForSequenceClassification.from_pretrained(roberta)
-# tokenizer = AutoTokenizer.from_pretrained(roberta)
-
-# labels = ['Negative', 'Neutral', 'Positive']
-
-# # sentiment analysis
-# encoded_tweet = tokenizer(tweet_proc, return_tensors='pt')
-# # output = model(encoded_tweet['input_ids'], encoded_tweet['attention_mask'])
-# output = model(**encoded_tweet)
-
-# scores = output[0][0].detach().numpy()
-# scores = softmax(scores)
-
-# for i in range(len(scores)):
-#     l = labels[i]
-#     s = scores[i]
-#     print(l,s)
 
 if __name__=='__main__':
     app.run(debug=True)
